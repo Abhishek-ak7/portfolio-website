@@ -38,9 +38,20 @@ body{
   /* styling contact btn  */
 .c-btn{
     border: none;
-    background: #fca61f;
-    color: #fff;
+    background: linear-gradient(90deg, #6f34fe 0%, #fca61f 100%);
+    color: #fff !important;
     font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 16px rgba(111,52,254,0.08);
+    transition: background 0.4s, transform 0.2s, box-shadow 0.3s;
+}
+.c-btn:hover{
+    background: linear-gradient(90deg, #fca61f 0%, #6f34fe 100%);
+    color: #fff !important;
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(252,166,31,0.15);
+    text-decoration: none;
 }
 /* styling home section starts */
 .home{
@@ -61,11 +72,22 @@ body{
     margin-top: 1rem;
     font-size: 1.2rem;
 }
+.h-btn{
+    border: none;
+    background: linear-gradient(90deg, #6f34fe 0%, #fca61f 100%);
+    color: #fff !important;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 16px rgba(111,52,254,0.08);
+    transition: background 0.4s, transform 0.2s, box-shadow 0.3s;
+}
 .h-btn:hover{
-    background: #6f34fe;
-    color: #fff;
-    transform: translateY(-20px);
-    transition-duration: 1s;
+    background: linear-gradient(90deg, #fca61f 0%, #6f34fe 100%);
+    color: #fff !important;
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(252,166,31,0.15);
+    text-decoration: none;
 }
 .link{
     text-decoration: none;
@@ -380,9 +402,15 @@ footer .link-group a:hover{
     right: 40px;
     display: none;
     font-size: 1.4rem;
-    background-color: #fca61f;
+    background: linear-gradient(90deg, #6f34fe 0%, #fca61f 100%);
     color: #fff;
-    animation: pulse 3s infinite;
+    border: none;
+    box-shadow: 0 4px 16px rgba(111,52,254,0.12);
+    transition: background 0.3s, transform 0.2s;
+}
+#btn-back-to-top:hover {
+    background: linear-gradient(90deg, #fca61f 0%, #6f34fe 100%);
+    transform: scale(1.08);
 }
 
 /* Resume Section Styles */
@@ -474,210 +502,238 @@ body {
     background-color: #f5f5f5;
 }
 .certificate-section {
-    padding: 50px 0;
+    background: linear-gradient(120deg, #f2f2ff 0%, #f9f9f9 100%);
+    padding: 60px 0 40px 0;
 }
 .certificate {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 28px 18px 22px 18px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(111,52,254,0.08);
     text-align: center;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
 }
 .certificate img {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(111,52,254,0.06);
+    transition: transform 0.4s;
+}
+.certificate:hover img {
+    transform: scale(1.06) rotate(-2deg);
 }
 .certificate h4 {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #3f396d;
+    margin-bottom: 8px;
 }
 .certificate p {
-    font-size: 16px;
-    color: #6c757d;
-}
-/* Image styling */
-#myimg {
-    border-radius: 20px; /* Rounded corners */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
-    transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease; /* Smooth transitions */
-    filter: brightness(1.1) contrast(1.2); /* Enhanced brightness and contrast */
-    max-width: 100%; /* Ensure image is responsive */
-    height: auto; /* Maintain aspect ratio */
-    animation: fadeInUp 1s ease-in-out; /* Fade and slide-in animation */
-    position: relative; /* Required for glow effect */
-  }
-  
-  /* Hover effect */
-  #myimg:hover {
-    transform: scale(1.1) rotate(3deg); /* More pronounced scale-up and rotation */
-    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4); /* Enhanced shadow for depth */
-    filter: brightness(1.2) contrast(1.3); /* Even more brightness and contrast */
-    animation: none; /* Disable fade-in animation on hover */
-  }
-  
-  /* Glow effect */
-  #myimg::before {
-    content: ''; 
-    position: absolute;
-    top: -10px; bottom: -10px;
-    left: -10px; right: -10px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.3); /* Soft glowing effect */
-    z-index: -1; /* Place glow behind the image */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Glowing border */
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  /* Hover glow effect */
-  #myimg:hover::before {
-    opacity: 1; /* Show glow when hovered */
-  }
-  
-  /* Fade-in and slide-up animation */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px); /* Starts below */
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0); /* Ends in place */
-    }
-  }
-  /* Ensure both images have the same height */
-.card-img-top {
-    height: 250px; /* Set a fixed height for the images */
-    object-fit: cover; /* Ensure the images cover the assigned area while maintaining their aspect ratio */
-    width: 100%; /* Make sure the images are responsive */
-  }
-  
-  /* Optional: Add some space below images and style the card elements */
-  .card-body {
-    padding: 20px;
-  }
-  
-  .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  
-  .card-body p {
     font-size: 1rem;
-  }
-  
-  .badge {
-    margin-right: 5px;
-    margin-bottom: 5px;
-  }
-  
-/* 
-<!-- CSS for Blog Section --> */ 
+    color: #6c757d;
+    margin-bottom: 0;
+}
 
-  /* Blog Section Styles */
-  .blog-card {
-    background: white;
-    border-radius: 10px;
+/* --- Enhanced Buttons --- */
+.c-btn, .h-btn, .blog-btn {
+    border: none;
+    background: linear-gradient(90deg, #6f34fe 0%, #fca61f 100%);
+    color: #fff !important;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 16px rgba(111,52,254,0.08);
+    transition: background 0.4s, transform 0.2s, box-shadow 0.3s;
+}
+.c-btn:hover, .h-btn:hover, .blog-btn:hover {
+    background: linear-gradient(90deg, #fca61f 0%, #6f34fe 100%);
+    color: #fff !important;
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(252,166,31,0.15);
+    text-decoration: none;
+}
+
+/* --- Card & Certificate Glow and Hover --- */
+.card, .certificate, .blog-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(63,57,109,0.08);
+    transition: box-shadow 0.3s, transform 0.2s;
+    border: none;
+    background: #fff;
+}
+.card:hover, .certificate:hover, .blog-card:hover {
+    box-shadow: 0 8px 32px rgba(111,52,254,0.18), 0 1.5px 8px rgba(252,166,31,0.08);
+    transform: translateY(-6px) scale(1.03);
+}
+
+/* --- Section Headings --- */
+.heading small {
+    color: #fca61f;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.heading h3, .heading h2 {
+    color: #3f396d;
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(111,52,254,0.04);
+}
+.underline {
+    width: 90px;
+    height: 4px;
+    background: linear-gradient(90deg, #6f34fe 0%, #fca61f 100%);
+    margin: 18px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* --- Badges --- */
+.badge, .badge-pill, .badge.bg-secondary, .badge.bg-primary {
+    background: linear-gradient(90deg, #6f34fe 0%, #fca61f 100%) !important;
+    color: #fff !important;
+    font-weight: 500;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    padding: 6px 14px;
+    margin: 2px 3px 2px 0;
+    box-shadow: 0 2px 6px rgba(111,52,254,0.08);
+}
+
+/* --- Portfolio Cards --- */
+.card-img-top {
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    transition: filter 0.3s;
+}
+.card:hover .card-img-top {
+    filter: brightness(1.08) contrast(1.08) saturate(1.1);
+}
+.card-title {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #6f34fe;
+}
+.card-body {
+    padding: 22px 18px 18px 18px;
+    background: #f9f9fc;
+    border-radius: 0 0 12px 12px;
+}
+
+/* --- Blog Card --- */
+.blog-card {
+    background: linear-gradient(120deg, #fff 60%, #f2f2ff 100%);
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+.blog-img-container {
+    border-radius: 14px 14px 0 0;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .blog-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  }
-  
-  .blog-img-container {
+}
+.blog-img {
+    border-radius: 14px 14px 0 0;
+    transition: transform 0.4s;
+}
+.blog-card:hover .blog-img {
+    transform: scale(1.07);
+}
+
+/* --- Certificate Section --- */
+.certificate-section {
+    background: linear-gradient(120deg, #f2f2ff 0%, #f9f9f9 100%);
+    padding: 60px 0 40px 0;
+}
+.certificate {
+    background: #fff;
+    padding: 28px 18px 22px 18px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(111,52,254,0.08);
+    text-align: center;
+    margin-bottom: 32px;
     position: relative;
     overflow: hidden;
-    height: 200px;
-  }
-  
-  .blog-img {
+}
+.certificate img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-  
-  .blog-card:hover .blog-img {
-    transform: scale(1.05);
-  }
-  
-  .blog-date {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.8rem;
-  }
-  
-  .blog-content {
-    padding: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .blog-content h4 {
+    border-radius: 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(111,52,254,0.06);
+    transition: transform 0.4s;
+}
+.certificate:hover img {
+    transform: scale(1.06) rotate(-2deg);
+}
+.certificate h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
     color: #3f396d;
-    margin-bottom: 10px;
-  }
-  
-  .blog-rating {
-    color: #ffc107;
-    margin-bottom: 10px;
-  }
-  
-  .blog-rating span {
+    margin-bottom: 8px;
+}
+.certificate p {
+    font-size: 1rem;
     color: #6c757d;
-    margin-left: 5px;
-  }
-  
-  .blog-content p {
-    color: #6c757d;
-    margin-bottom: 15px;
-    flex-grow: 1;
-  }
-  
-  .blog-btn {
-    display: inline-block;
-    background: #3f396d;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-  
-  .blog-btn:hover {
-    background: #2e2952;
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* Modal Styles */
-  .modal-content {
-    border-radius: 15px;
-    overflow: hidden;
-  }
-  
-  .modal-header {
-    background: #3f396d;
-    color: white;
-    border-bottom: none;
-  }
-  
-  .modal-body img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-  }
+    margin-bottom: 0;
+}
+
+/* --- Animated Gradient Background --- */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    background: linear-gradient(120deg, #232136 0%, #6f34fe 50%, #fca61f 100%);
+    background-size: 200% 200%;
+    opacity: 0.18;
+    animation: animatedBgGradient 12s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes animatedBgGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* --- Optional: Add floating glowing circles --- */
+.bg-anim-circle {
+    position: fixed;
+    border-radius: 50%;
+    opacity: 0.13;
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(2px);
+    animation: floatCircle 16s linear infinite;
+}
+.bg-anim-circle.one {
+    width: 320px; height: 320px;
+    left: 5vw; top: 10vh;
+    background: #6f34fe;
+    animation-delay: 0s;
+}
+.bg-anim-circle.two {
+    width: 220px; height: 220px;
+    right: 8vw; top: 40vh;
+    background: #fca61f;
+    animation-delay: 4s;
+}
+.bg-anim-circle.three {
+    width: 180px; height: 180px;
+    left: 40vw; bottom: 8vh;
+    background: #ff6b6b;
+    animation-delay: 8s;
+}
+@keyframes floatCircle {
+    0% { transform: translateY(0) scale(1);}
+    50% { transform: translateY(-40px) scale(1.08);}
+    100% { transform: translateY(0) scale(1);}
+}
