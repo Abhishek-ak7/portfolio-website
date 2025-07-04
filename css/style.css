@@ -737,3 +737,145 @@ body::before {
     50% { transform: translateY(-40px) scale(1.08);}
     100% { transform: translateY(0) scale(1);}
 }
+
+/* Responsive Utilities & Fixes */
+
+/* Make images and cards scale nicely */
+img, .card-img-top, .certificate img, .blog-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive padding and font for sections */
+section, .certificate-section, .blog, .portfolio, .resume, .training, .contact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Responsive headings */
+.heading h2, .heading h3 {
+    font-size: 2.2rem;
+}
+@media (max-width: 991px) {
+    .heading h2, .heading h3 {
+        font-size: 1.7rem;
+    }
+    .c-orange {
+        font-size: 2.2rem;
+    }
+    .home h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    .resume-item, .progress-card, .service-card, .certificate, .blog-card {
+        padding: 18px 10px;
+    }
+    .portfolio-body .card {
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width: 767px) {
+    .container, .container-fluid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .heading h2, .heading h3 {
+        font-size: 1.2rem;
+    }
+    .c-orange {
+        font-size: 1.3rem;
+    }
+    .home h2 {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+    .resume-item, .progress-card, .service-card, .certificate, .blog-card {
+        padding: 12px 5px;
+    }
+    .portfolio-body .card {
+        margin-bottom: 1rem;
+    }
+    .blog .row, .portfolio-body .row, .certificate-section .row {
+        flex-direction: column !important;
+    }
+    .blog-card, .certificate, .resume-item, .service-card {
+        margin-bottom: 1.5rem;
+    }
+    .navbar .container-fluid, .navbar .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    #btn-back-to-top {
+        right: 10px;
+        bottom: 10px;
+        font-size: 1.1rem;
+        padding: 8px 12px;
+    }
+}
+
+/* Responsive footer */
+footer .link-group {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+footer .link-group a, footer .vr {
+    margin: 0.2rem 0.5rem;
+    display: inline-block;
+}
+@media (max-width: 576px) {
+    footer .link-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .vr {
+        display: none;
+    }
+}
+
+/* Responsive certificates grid */
+.certificate-section .row > div[class^="col-"] {
+    margin-bottom: 2rem;
+}
+@media (max-width: 767px) {
+    .certificate-section .row > div[class^="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Responsive blog cards */
+@media (max-width: 991px) {
+    .blog .row > div[class^="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Responsive navbar */
+@media (max-width: 991px) {
+    .navbar .container-fluid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .navbar-nav {
+        gap: 0.5rem !important;
+    }
+    .navbar-brand {
+        font-size: 1.3rem !important;
+    }
+    .c-btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+@media (max-width: 767px) {
+    .bg-anim-circle {
+        width: 80px !important;
+        height: 80px !important;
+        left: auto !important;
+        right: auto !important;
+        top: 5vh !important;
+        bottom: auto !important;
+    }
+}
